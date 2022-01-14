@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+  <table class="table table-hover table-striped align-middle">
+    <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Twitter</th>
+        </tr>
+    </thead>
+    <tbdoy class="">
+      <% @friends.each do |friend| %>
+        <% if friend.user == current_user%>
+          <%= render friend %>
+        <% end %>
+      <% end %>
+        
+    </tbdoy>
+  </table>
+
+  <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+<% else %>
+  <h1>Hellow World</h1>
+
+<% end %>

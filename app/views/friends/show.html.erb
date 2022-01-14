@@ -1,0 +1,27 @@
+
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">
+      <%= @friend.frist_name %>
+      <%= @friend.last_name  %>
+    </h1>
+    <ul class="col-md-8 fs-8">
+      <li>email: 
+        <%= @friend.email %>
+      </li>
+      <li>phone: 
+        <%= @friend.phone %>
+      </li>
+      <li>twitter: 
+        <%= @friend.twitter %>
+      </li>
+    </ul>
+  </div>
+<div>
+  <%= button_to "Delete", @friend, class:"btn btn-danger my-3", method: :delete %>
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary" %> 
+  <%= link_to "Back to friends", friends_path, class:"btn btn-secondary" %>
+</div>
+
+  
+</div>
